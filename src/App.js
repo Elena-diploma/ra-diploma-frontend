@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import CatalogContent from './components/pages/Catalog/CatalogContent';
 import MainContent from './components/pages/Main/MainContent';
 import Page404Content from './components/pages/404/Page404Content';
@@ -22,6 +22,7 @@ export default function App() {
                             <Route path="/catalog" element={<CatalogContent />} />
                             <Route path="/about" element={<AboutContent />} />
                             <Route path="/contacts" element={<ContactsContent />} />
+                            <Route path="/ra-diploma-frontend" element={<MainContent />} />
                             <Route path="/" element={<MainContent />} />
                             <Route path="*" element={<Page404Content />} />
                         </Routes>
