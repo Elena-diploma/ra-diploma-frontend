@@ -15,8 +15,6 @@ export default function Topsales() {
     dispatch(fetchGetTopSales());
   }, [dispatch]);
 
-  // console.log('TopsalesContent_topSales: ', topSales);
-
   const topSalesCards = topSales.map((cardProps) => (
     <SectionCard key={cardProps.id} {...cardProps} />
   ));

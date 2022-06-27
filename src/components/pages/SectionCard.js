@@ -2,13 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function SectionCard({ id, title, price, images }) {
-  // console.log('SectionCardContent_props: ', {
-  //   id,
-  //   // category,
-  //   title,
-  //   price,
-  //   images,
-  // });
   return (
     <div className="col-4">
       <div className="card">

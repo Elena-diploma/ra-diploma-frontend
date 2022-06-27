@@ -14,9 +14,6 @@ export default function Product({ setCart }) {
   const params = useParams();
   const dispatch = useDispatch();
 
-  // console.log('ProductContent_params.id: ', params.id);
-  // console.log('ProductContent_product: ', product);
-
   useEffect(() => {
     dispatch(fetchGetProduct(params.id));
   }, [dispatch, params.id]);
@@ -26,7 +23,6 @@ export default function Product({ setCart }) {
   }, [navigate, error]);
 
   const handleSelectSize = (size) => {
-    // console.log('handleSelectSize: ', size);
     setSelectedSize((prev) => (size === prev ? '' : size));
   };
 
@@ -46,13 +42,8 @@ export default function Product({ setCart }) {
       count: quantity,
       price: product.price,
     };
-    // console.log('new cart item to add: ', item);
     setCart((prevCart) => {
-      // console.log('setCart_prevCart&length: ', prevCart, prevCart?.length);
       if (!prevCart?.length) return [item];
-      // if (prevCart.findIndex((el) => el.id === item.id) === -1)
-      //   return [...prevCart, item];
-      // этот иф и случай, когда совпадают id, но разные размеры - см. последний return
       if (
         prevCart.findIndex(
           (el) => el.id === item.id && el.size === item.size
@@ -83,7 +74,6 @@ export default function Product({ setCart }) {
 
   const imgSrcAttr = images?.[0];
 
-  // "avalible" - так от бека приходит...
   const sizesElement = sizes?.map(
     ({ size, avalible }) =>
       avalible && (

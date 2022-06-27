@@ -1,8 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import topSalesReducer from '../reducers/serviceList';
-import catalogReducer from '../reducers/serviceEdit';
-import productReducer from '../reducers/serviceFilter';
-import cartReducer from '../reducers/serviceAdd';
+import topSalesReducer from '../reducers/topSales';
+import catalogReducer from '../reducers/catalog';
+import productReducer from '../reducers/product';
+import cartReducer from '../reducers/cart';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({

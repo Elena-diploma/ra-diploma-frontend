@@ -1,5 +1,10 @@
-import withWrapper from '../../../hooks/withWrapper';
-import Page404Content from './Page404Content';
+import React from 'react';
 
-const Page404 = withWrapper(Page404Content);
-export default Page404;
+export default function Page404() {
+    return (
+        <>
+            <h2 className="text-center">Страница не найдена</h2>
+            <p>Такая страница не найдена!</p>
+        </>
+    );
+}

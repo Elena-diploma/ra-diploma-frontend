@@ -1,5 +1,12 @@
-import withWrapper from '../../../hooks/withWrapper';
-import MainContent from './MainContent';
+import React from 'react';
+import Topsales from '../Topsales';
+import Catalog from '../Catalog/Catalog';
 
-const Main = withWrapper(MainContent);
-export default Main;
+export default function Main() {
+    return (
+        <>
+            <Topsales />
+            <Catalog nosearch={true} />
+        </>
+    );
+}
