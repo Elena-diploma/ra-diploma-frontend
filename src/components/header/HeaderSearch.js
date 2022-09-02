@@ -14,6 +14,7 @@ export default function HeaderSearch({ invisible, form, handleChange }) {
   const baseClassName = 'header-controls-search-form form-inline';
   return (
     <form
+      // data-id="search-form"
       className={invisible ? baseClassName + ' invisible' : baseClassName}
       onSubmit={handleSubmit}
     >

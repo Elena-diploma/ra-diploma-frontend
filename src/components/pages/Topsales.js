@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import SectionCard from './SectionCard';
 import Loader from './Loader';
 import Error from './Error';
-import { fetchGetTopSales } from '../../api/index';
+import { fetchGetTopSales } from '../../api/api';
 
 export default function Topsales() {
   const { topSales, loading, error } = useSelector(

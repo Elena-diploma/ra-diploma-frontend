@@ -6,8 +6,8 @@ import Error from '../Error';
 import Success from '../Success';
 import CartItems from './CartItems';
 import CartInfo from './CartInfo';
-import { fetchPostCartSuccess } from '../../../actions/actionCreators';
-import { fetchPostOrder } from '../../../api/index';
+import { fetchPostCartSuccess } from '../../../store/SliceCart';
+import { fetchPostOrder } from '../../../api/api';
 import { nanoid } from 'nanoid';
 
 export default function Cart({ setCart, setOwner }) {
@@ -51,7 +51,7 @@ export default function Cart({ setCart, setOwner }) {
     dispatch(fetchPostOrder(setCart, setOwner));
   };
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = () => {
     setConfirm(() => !isConfirmed);
   };
 
@@ -89,7 +89,7 @@ export default function Cart({ setCart, setOwner }) {
   const submitOrderDisable = !isConfirmed;
   const successText = 'Благодарим за заказ! Продолжим покупки?';
   const emptyCartText = 'В корзине нет товаров.';
-
+  console.log('CartContent_success: ', success);
   return (
     <>
       {(loading && <Loader />) ||

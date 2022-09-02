@@ -24,18 +24,18 @@ const menuItemsHeader = [
 
 export default function HeaderMenu() {
   return (
-      <MenuList className="navbar-nav mr-auto" items={menuItemsHeader}>
-        {(items) =>
-            items.map((item, index) => (
-                <MenuListItem key={index} className="nav-item">
-                  <MenuItemNavLink
-                      className="nav-link"
-                      route={item.route}
-                      name={item.name}
-                  />
-                </MenuListItem>
-            ))
-        }
-      </MenuList>
+    <MenuList className="navbar-nav mr-auto" items={menuItemsHeader}>
+      {(items) =>
+        items.map((item, index) => (
+          <MenuListItem key={index} className="nav-item">
+            <MenuItemNavLink
+              className="nav-link"
+              route={item.route}
+              name={item.name}
+            />
+          </MenuListItem>
+        ))
+      }
+    </MenuList>
   );
 }

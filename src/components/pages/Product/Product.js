@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchGetProduct } from '../../../api/index';
+import { fetchGetProduct } from '../../../api/api';
 import Loader from '../Loader';
 
 export default function Product({ setCart }) {

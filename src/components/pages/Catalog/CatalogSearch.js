@@ -6,6 +6,7 @@ export default function CatalogSearch({ handleSearch }) {
   const {
     search,
   } = useSelector((state) => state.catalog);
+
   useEffect(() => {
     setForm((prevForm) => ({ ...prevForm, search }));
   }, [search]);

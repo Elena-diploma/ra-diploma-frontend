@@ -20,18 +20,18 @@ const menuItemsFooter = [
 
 export default function FooterMenu() {
   return (
-      <MenuList className="nav flex-column" items={menuItemsFooter}>
-        {(items) =>
-            items.map((item, index) => (
-                <MenuListItem key={index} className="nav-item">
-                  <MenuItemLink
-                      className="nav-link"
-                      route={item.route}
-                      name={item.name}
-                  />
-                </MenuListItem>
-            ))
-        }
-      </MenuList>
+    <MenuList className="nav flex-column" items={menuItemsFooter}>
+      {(items) =>
+        items.map((item, index) => (
+          <MenuListItem key={index} className="nav-item">
+            <MenuItemLink
+              className="nav-link"
+              route={item.route}
+              name={item.name}
+            />
+          </MenuListItem>
+        ))
+      }
+    </MenuList>
   );
 }
